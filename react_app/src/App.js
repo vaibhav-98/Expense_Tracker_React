@@ -1,21 +1,49 @@
 import "./App.css";
-import ExpenseItem from "./Componets/Expenseitem";
+import Expenses from "./Componets/Expenses/Expenses";
 
 function App() {
 
-     let expenseDate = new Date(2024, 12 , 6);
-     let expenseTitle = "School fee";
-    let expenseAmount = 400
+      let expenses = [
+        {
+          id:'e1',
+          title: "School fee",
+          amount: 200,
+          date: new Date(2024,10,10)
+      },
+      {
+        id:'e2',
+        title: "Books",
+        amount: 200,
+        date: new Date(2024,10,10)
+    },
+    {
+      id:'e3',
+      title: "House rent",
+      amount: 200,
+      date: new Date(2024,10,10)
+  },
+  {
+    id:'e4',
+    title: "Travel",
+    amount: 200,
+    date: new Date(2024,10,10)
+},
+    ]
   return (
     <div>
       <h2> Let's get started</h2>
-       <ExpenseItem  
-       date={expenseDate}
-       title={expenseTitle} 
-       amount={expenseAmount}>
-       </ExpenseItem>
+       < Expenses item={expenses}/>
+   
     </div>
   );
 }
 
 export default App;
+
+
+// {/* <componet1 >
+
+//    < componets2/>
+
+// </componet1> */}
+
